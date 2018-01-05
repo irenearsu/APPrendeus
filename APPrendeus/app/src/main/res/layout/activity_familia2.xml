@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="eus.ehu.adibidea.tta.apprendeus.Familia2Activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Familia"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Familia"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/mutila"/>
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/neska"/>
+
+    </GridLayout>
+
+    <EditText
+        android:id="@+id/familia3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Familia_pista"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/mutila"/>
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/mutila"/>
+
+    </GridLayout>
+
+    <EditText
+        android:id="@+id/familia4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Familia_pista"/>
+
+    <Button
+        android:id="@+id/familia_zuzendu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Zuzendu"
+        android:onClick="Zuzendu"/>
+
+
+</LinearLayout>

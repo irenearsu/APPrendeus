@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="eus.ehu.adibidea.tta.apprendeus.GorputzaActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Gorputza"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="231dp"
+            android:layout_height="462dp"
+            android:src="@drawable/umea" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Burua"
+                android:textSize="20dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Burua"
+                android:textSize="20dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Burua"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/burua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Oina"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/oina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Sabela"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/sabela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Lepoa"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/lepoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Eskua"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/eskua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Hanka"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/hanka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Besoa"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:id="@+id/besoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Besoa"
+                android:textSize="20dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Besoa"
+                android:textSize="20dp"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/gorputza_zuzendu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Zuzendu"
+                android:onClick="Zuzendu"/>
+
+        </GridLayout>
+
+
+
+
+    </GridLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="eus.ehu.adibidea.tta.apprendeus.EtxeaActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Etxea"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/sukaldea"
+            android:onClick="Sukaldea"/>
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/jangela"
+            android:onClick="Jangela"/>
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/logela"
+            android:onClick="Logela"/>
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="175dp"
+            android:src="@drawable/egongela"
+            android:onClick="Egongela"/>
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="110dp"
+            android:src="@drawable/komuna"
+            android:onClick="Komuna"/>
+
+         <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Etxea"
+                 android:gravity="center"
+                 android:textSize="20dp"
+                 android:visibility="invisible"/>
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Etxea"
+                 android:gravity="center"
+                 android:textSize="20dp"
+                 android:visibility="invisible"/>
+
+             <Button android:id="@+id/Etxea_zuzendu"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Zuzendu"
+                 android:onClick="Zuzendu"
+                 tools:layout_editor_absoluteY="48dp"
+                 tools:layout_editor_absoluteX="94dp"/>
+
+         </GridLayout>
+
+    </GridLayout>
+
+</LinearLayout>

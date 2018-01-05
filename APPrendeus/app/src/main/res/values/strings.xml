@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">APPrendeus</string>
+
+    <string name="Zuzendu">Zuzendu</string>
+
+    <string name="Erabiltzailea">Erabiltzailea</string>
+    <string name="Erabiltzailea_pista">Erabiltzaile izena</string>
+    <string name="Pasahitza">Pasahitza</string>
+    <string name="Pasahitza_pista">Pasahitza</string>
+    <string name="Botoia_sartu">SARTU</string>
+    <string name="Botoia_erregistratu">ERREGISTRATU</string>
+
+    <string name="Aukeratu">Zein mailetara sartu nahi duzu?</string>
+    <string name="Botoia_A1">A1</string>
+    <string name="Botoia_A2">A2</string>
+    <string name="Botoia_B1">B1</string>
+
+    <string name="Botoia_1maila">1. maila</string>
+    <string name="Botoia_2maila">2. maila</string>
+    <string name="Botoia_3maila">3. maila</string>
+
+    <string name="Gorputza">Zein gorputzeko atal dagokio zenbaki bakoitzari?</string>
+    <string name="Burua">Burua</string>
+    <string name="Oina">Oina</string>
+    <string name="Sabela">Sabela</string>
+    <string name="Lepoa">Lepoa</string>
+    <string name="Eskua">Eskua</string>
+    <string name="Hanka">Hanka</string>
+    <string name="Besoa">Besoa</string>
+
+    <string name="Familia">Osatu familia baten datuak</string>
+    <string name="Familia_pista">Zein senide da lehenarentzat bigarrena?</string>
+
+    <string name="Etxea">Aukeratu gela bakoitza eta bete izen egokiarekin</string>
+    <string name="Gela">Etxeko zein gela da?</string>
+
+    <string name="Atzera">Atzera</string>
+
+
 </resources>
