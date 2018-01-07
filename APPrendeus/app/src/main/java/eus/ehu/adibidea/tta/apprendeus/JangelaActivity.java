@@ -23,9 +23,19 @@ public class JangelaActivity extends AppCompatActivity {
         getWindow().setLayout((int)(width*.8),(int)(height*.7));
     }
 
-    protected void Atzera(View view){
-        Intent intent = new Intent(this,EtxeaActivity.class);
+    protected void Gorde(View view){
+
+        try{
+
+            EtxeaActivity.JANGELA = ((EditText) findViewById(R.id.jangela)).getText().toString();
+        }
+        catch (NumberFormatException n){
+
+            EtxeaActivity.JANGELA = "";
+        }
+
+        /*Intent intent = new Intent(this,EtxeaActivity.class);
         intent.putExtra(EtxeaActivity.JANGELA_EXTRA,((EditText) findViewById(R.id.jangela)).getText().toString());
-        startActivity(intent);
+        startActivity(intent);*/
     }
 }

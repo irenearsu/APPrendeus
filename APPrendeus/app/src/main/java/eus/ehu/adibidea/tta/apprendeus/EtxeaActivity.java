@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,15 +15,15 @@ import eus.ehu.adibidea.tta.apprendeus.Negocio.Emaitzak;
 public class EtxeaActivity extends AppCompatActivity {
 
     public static final String SUKALDEA_EXTRA = "SUKALDEA";
-    public String SUKALDEA;
+    public static String SUKALDEA;
     public static final String JANGELA_EXTRA = "JANGELA";
-    public String JANGELA;
+    public static String JANGELA;
     public static final String EGONGELA_EXTRA = "EGONGELA";
-    public String EGONGELA;
+    public static String EGONGELA;
     public static final String LOGELA_EXTRA = "LOGELA";
-    public String LOGELA;
+    public static String LOGELA;
     public static final String KOMUNA_EXTRA = "KOMUNA";
-    public String KOMUNA;
+    public static String KOMUNA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,10 +67,14 @@ public class EtxeaActivity extends AppCompatActivity {
         Intent intent = new Intent(this,Menu2Activity.class);
         int igo = 0;
         if (ondo()){
+            Toast.makeText(getApplicationContext(), "Ondo!", Toast.LENGTH_SHORT).show();
             igo = 1;
             intent.putExtra(Menu2Activity.MAILA_EXTRA,igo);
             startActivity(intent);
         }
+        else
+            Toast.makeText(getApplicationContext(), "Saiatu berriro!", Toast.LENGTH_SHORT).show();
+
     }
 
     protected boolean ondo(){
@@ -106,7 +111,7 @@ public class EtxeaActivity extends AppCompatActivity {
 
 
         }
-        catch (NumberFormatException e){
+        catch (NullPointerException e){
 
             return false;
         }

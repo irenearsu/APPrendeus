@@ -23,9 +23,22 @@ public class LogelaActivity extends AppCompatActivity {
         getWindow().setLayout((int)(width*.8),(int)(height*.7));
     }
 
-    protected void Atzera(View view){
-        Intent intent = new Intent(this,EtxeaActivity.class);
+    protected void Gorde(View view){
+
+        try{
+
+            EtxeaActivity.LOGELA = ((EditText) findViewById(R.id.logela)).getText().toString();
+
+        }
+        catch (NumberFormatException e){
+
+            EtxeaActivity.LOGELA = "";
+        }
+
+
+
+        /*Intent intent = new Intent(this,EtxeaActivity.class);
         intent.putExtra(EtxeaActivity.LOGELA_EXTRA,((EditText) findViewById(R.id.logela)).getText().toString());
-        startActivity(intent);
+        startActivity(intent);*/
     }
 }

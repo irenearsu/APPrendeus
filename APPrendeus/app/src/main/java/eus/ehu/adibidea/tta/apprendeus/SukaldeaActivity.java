@@ -28,10 +28,23 @@ public class SukaldeaActivity extends AppCompatActivity {
         getWindow().setLayout((int)(width*.8),(int)(height*.7));
     }
 
-    protected void Atzera(View view){
-        Intent intent = new Intent(this,EtxeaActivity.class);
+
+
+    protected void Gorde(View view){
+
+        try{
+
+            EtxeaActivity.SUKALDEA = ((EditText) findViewById(R.id.sukaldea)).getText().toString();
+
+        }
+        catch (NumberFormatException e){
+            EtxeaActivity.SUKALDEA = "";
+        }
+
+
+        /*Intent intent = new Intent(this,EtxeaActivity.class);
         intent.putExtra(EtxeaActivity.SUKALDEA_EXTRA,((EditText) findViewById(R.id.sukaldea)).getText().toString());
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
 
