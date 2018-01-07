@@ -36,5 +36,14 @@
 
     <string name="Gorde">Gorde</string>
 
+    <string name="Egunak">Zein egun dagokio zenbaki bakoitzari?</string>
+    <string name="A1">Astelehena</string>
+    <string name="A2">Asteartea</string>
+    <string name="A3">Asteazkena</string>
+    <string name="O1">Osteguna</string>
+    <string name="O2">Ostirala</string>
+    <string name="L">Larunbata</string>
+    <string name="I">Igandea</string>
+
 
 </resources>

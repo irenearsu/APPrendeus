@@ -17,6 +17,7 @@ public class Menu2Activity extends AppCompatActivity {
 
         switch (MAILA){
             case 0:
+                findViewById(R.id.button2).setEnabled(true);
                 break;
             case 1:
                 findViewById(R.id.button2).setEnabled(true);
@@ -29,7 +30,7 @@ public class Menu2Activity extends AppCompatActivity {
     }
 
     public void maila1(View view){
-        Intent intent = new Intent(this,EtxeaActivity.class);
+        Intent intent = new Intent(this,GorputzaActivity.class);
         startActivity(intent);
     }
 

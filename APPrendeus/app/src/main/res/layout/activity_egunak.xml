@@ -4,7 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="eus.ehu.adibidea.tta.apprendeus.EgunakActivity">
+    android:orientation="vertical"
+    tools:context="eus.ehu.adibidea.tta.apprendeus.EgunakActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Egunak"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_weight="0.16">
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/o1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/A1"/>
+
+        <EditText
+            android:id="@+id/a1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="271dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/i"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/A2"/>
+
+        <EditText
+            android:id="@+id/a2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="271dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/A3"/>
+
+        <EditText
+            android:id="@+id/a3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="271dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/O1"/>
+
+        <EditText
+            android:id="@+id/o1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="271dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/l"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/O2"/>
+
+        <EditText
+            android:id="@+id/o2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="271dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/o2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/L"/>
+
+        <EditText
+            android:id="@+id/l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="271dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/I"/>
+
+        <EditText
+            android:id="@+id/i"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="271dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Zuzendu"
+        android:onClick="Zuzendu"/>
+
 
 
 
