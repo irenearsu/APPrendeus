@@ -1,9 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="eus.ehu.adibidea.tta.apprendeus.BingoaActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Bingoa"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Bingoa"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <TextView
+            android:id="@+id/zenbaki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_columnWeight="1"/>
+
+        <Button
+            android:id="@+id/hurrengoa"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/Hurrengoa"
+            android:onClick="hurrengoa"/>
+
+
+    </GridLayout>
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+        <Button
+            android:id="@+id/b5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+        <Button
+            android:id="@+id/b6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+        <Button
+            android:id="@+id/b7"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+        <Button
+            android:id="@+id/b8"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="a"
+            android:onClick="asmatu"/>
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Zuzendu"
+        android:onClick="zuzendu"/>
+
+</LinearLayout>

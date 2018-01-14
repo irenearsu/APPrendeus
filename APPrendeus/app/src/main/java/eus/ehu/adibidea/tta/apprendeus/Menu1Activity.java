@@ -7,10 +7,23 @@ import android.view.View;
 
 public class Menu1Activity extends AppCompatActivity {
 
+    public static final String MAILA_EXTRA = "MAILA";
+    public int MAILA = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu1);
+
+        this.MAILA = getIntent().getIntExtra(MAILA_EXTRA,0);
+
+        switch (MAILA){
+            case 0:
+                break;
+            case 1:
+                findViewById(R.id.button2).setEnabled(true);
+                break;
+        }
     }
 
     public void A1(View view){

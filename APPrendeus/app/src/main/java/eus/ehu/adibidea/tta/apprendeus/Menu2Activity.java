@@ -17,6 +17,7 @@ public class Menu2Activity extends AppCompatActivity {
 
         switch (MAILA){
             case 0:
+                //findViewById(R.id.button2).setEnabled(true);
                 //findViewById(R.id.button3).setEnabled(true);
                 break;
             case 1:
