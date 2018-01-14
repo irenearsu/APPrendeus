@@ -14,6 +14,7 @@ public class Emaitzak {
     private final List<Integer> FAMILIA;
     private final List<Integer> ETXEA;
     private final List<Integer> EGUNAK;
+    private final List<Integer> URTAROAK;
 
     public Emaitzak(){
 
@@ -47,6 +48,12 @@ public class Emaitzak {
         EGUNAK.add(4,5);
         EGUNAK.add(5,4);
         EGUNAK.add(6,7);
+
+        URTAROAK = new ArrayList<Integer>();
+        URTAROAK.add(0,0);
+        URTAROAK.add(1,1);
+        URTAROAK.add(2,2);
+        URTAROAK.add(3,3);
     }
 
     public boolean checkresults(int jokua, List<Integer> erab){
@@ -77,6 +84,12 @@ public class Emaitzak {
                 if(egunaks.equals(erabs))
                     ondo=true;
                 break;
+            case 4:
+                String urtaroaks = URTAROAK.toString();
+                if(urtaroaks.equals(erabs))
+                    ondo=true;
+                break;
+
         }
 
         return ondo;

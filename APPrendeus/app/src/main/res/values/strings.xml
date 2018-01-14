@@ -45,5 +45,11 @@
     <string name="L">Larunbata</string>
     <string name="I">Igandea</string>
 
+    <string name="Urtaroak">Aukeratu lau argazkiei dagokien urtaroa</string>
+    <string name="Negua">Negua</string>
+    <string name="Udaberria">Udaberria</string>
+    <string name="Uda">Uda</string>
+    <string name="Udazkena">Udazkena</string>
+
 
 </resources>

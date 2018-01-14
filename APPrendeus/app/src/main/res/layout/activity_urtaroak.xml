@@ -1,9 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="eus.ehu.adibidea.tta.apprendeus.UrtaroakActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Urtaroak"
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Urtaroak"
+            android:gravity="center"
+            android:visibility="invisible"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/arbola"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/aterkia"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/kalabaza"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/lainok"/>
+
+        </GridLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/udazkena">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb1_negua"
+                android:text="@string/Negua"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb1_udazkena"
+                android:text="@string/Udazkena"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb1_udaberria"
+                android:text="@string/Udaberria"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb1_uda"
+                android:text="@string/Uda"/>
+
+        </RadioGroup>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/eguzkia"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/sonbrilla"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/olatuak"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/hondartza"/>
+
+        </GridLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/udara">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb2_negua"
+                android:text="@string/Negua"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb2_udazkena"
+                android:text="@string/Udazkena"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb2_udaberria"
+                android:text="@string/Udaberria"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb2_uda"
+                android:text="@string/Uda"/>
+
+        </RadioGroup>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/papanoel"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/ekaitza"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/elupanpina"/>
+
+            <ImageView
+                android:layout_width="191dp"
+                android:layout_height="175dp"
+                android:src="@drawable/elurra"/>
+
+        </GridLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/negua">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb3_negua"
+                android:text="@string/Negua"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb3_udazkena"
+                android:text="@string/Udazkena"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb3_udaberria"
+                android:text="@string/Udaberria"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb3_uda"
+                android:text="@string/Uda"/>
+
+        </RadioGroup>
+
+
+        <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <ImageView
+                    android:layout_width="191dp"
+                    android:layout_height="175dp"
+                    android:src="@drawable/tximeleta"/>
+
+                <ImageView
+                    android:layout_width="191dp"
+                    android:layout_height="175dp"
+                    android:src="@drawable/picnic"/>
+
+                <ImageView
+                    android:layout_width="191dp"
+                    android:layout_height="175dp"
+                    android:src="@drawable/eguzkilainok"/>
+
+                <ImageView
+                    android:layout_width="191dp"
+                    android:layout_height="175dp"
+                    android:src="@drawable/lore"/>
+
+            </GridLayout>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/udaberria">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb4_negua"
+                    android:text="@string/Negua"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb4_udazkena"
+                    android:text="@string/Udazkena"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb4_udaberria"
+                    android:text="@string/Udaberria"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb4_uda"
+                    android:text="@string/Uda"/>
+
+            </RadioGroup>
+
+
+        <Button
+            android:id="@+id/familia_zuzendu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Zuzendu"
+            android:onClick="zuzendu"/>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

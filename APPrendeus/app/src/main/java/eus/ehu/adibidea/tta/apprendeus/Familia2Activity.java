@@ -30,9 +30,9 @@ public class Familia2Activity extends AppCompatActivity {
 
     }
 
-    protected void Zuzendu(View view){
+    protected void zuzendu(View view){
 
-        if(Ondo()){
+        if(ondo()){
             Toast.makeText(getApplicationContext(), "Ondo!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this,EtxeaActivity.class);
             startActivity(intent);
@@ -43,7 +43,7 @@ public class Familia2Activity extends AppCompatActivity {
 
     }
 
-    protected boolean Ondo(){
+    protected boolean ondo(){
 
         List<Integer> erab = new ArrayList<Integer>();
 
