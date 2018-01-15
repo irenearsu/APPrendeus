@@ -9,6 +9,8 @@
     <string name="Pasahitza_pista">Pasahitza</string>
     <string name="Botoia_sartu">SARTU</string>
     <string name="Botoia_erregistratu">ERREGISTRATU</string>
+    <string name="Argazkia">Argazkia atera</string>
+    <string name="no_camera">Argazkia ateratzeko kamera izatea beharrezkoa da</string>
 
     <string name="Aukeratu">Zein mailetara sartu nahi duzu?</string>
     <string name="Botoia_A1">A1</string>
