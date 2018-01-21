@@ -9,16 +9,27 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+
+import eus.ehu.adibidea.tta.apprendeus.Negocio.ProgressTask;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.Server;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
 
 public class LoginActivity extends AppCompatActivity {
 
     Uri pictureUri;
     public static final int PICTURE_REQUEST_CODE = 0;
     public static final int READ_REQUEST_CODE = 0;
+
+    public final Server server = new Server("http://u017633.ehu.eus:28080/APPrendeus");
+    User user;
 
 
     @Override
@@ -27,9 +38,38 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void login(View view){
-        Intent intent = new Intent(this,Menu1Activity.class);
-        startActivity(intent);
+    public void login(View view) throws JSONException{
+
+
+        user = new User(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
+
+        new ProgressTask<String>(this){
+            @Override
+            protected String work() throws Exception{
+                return server.logIn(user);
+            }
+
+            @Override
+            protected void onFinish(String result){
+                if(result.equals("OK")){
+                    Intent intent = new Intent(getApplicationContext(),Menu1Activity.class);
+                    startActivity(intent);
+                }
+                else if (result.equals("Login ERROR")){
+                    Toast.makeText(getApplicationContext(),"Logina ez da zuzena", Toast.LENGTH_SHORT).show();
+                }
+
+                else
+                    Toast.makeText(getApplicationContext(),"KX ez", Toast.LENGTH_SHORT).show();
+
+            }
+
+        }.execute();
+
+
+
+
+
     }
 
     public void argazkia(View view){
