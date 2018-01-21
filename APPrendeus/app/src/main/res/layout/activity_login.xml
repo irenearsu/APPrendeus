@@ -51,7 +51,7 @@
             android:text="@string/Botoia_erregistratu"
             tools:layout_editor_absoluteY="77dp"
             tools:layout_editor_absoluteX="16dp"
-            android:onClick="login"/>
+            android:onClick="signIn"/>
 
     </GridLayout>
 

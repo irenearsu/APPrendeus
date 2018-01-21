@@ -40,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login(View view) throws JSONException{
 
-
         user = new User(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
 
         new ProgressTask<String>(this){
@@ -65,10 +64,35 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         }.execute();
+    }
 
+    public void signIn(View view){
 
+        user = new User(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
 
+        new ProgressTask<String>(this){
+            @Override
+            protected String work() throws Exception{
+                return server.signIn(user);
+            }
 
+            @Override
+            protected void onFinish(String result){
+                if(result.equals("Erabiltzaile berria ondo gorde da")){
+                    Toast.makeText(getApplicationContext(),"Ondo erregistratu zara", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(),Menu1Activity.class);
+                    startActivity(intent);
+                }
+                else if (result.equals("Erabiltzaile hori badago dagoeneko")){
+                    Toast.makeText(getApplicationContext(),"Erabiltzaile izen hori bagado dagoeneko", Toast.LENGTH_SHORT).show();
+                }
+
+                else
+                    Toast.makeText(getApplicationContext(),"KX ez", Toast.LENGTH_SHORT).show();
+
+            }
+
+        }.execute();
 
     }
 

@@ -23,4 +23,11 @@ public class Server {
         json.put("password",user.getPassword());
         return restClient.postJson(json,"rest/School/login");
     }
+
+    public String signIn(User user) throws JSONException,IOException{
+        JSONObject json = new JSONObject();
+        json.put("name",user.getName());
+        json.put("password",user.getPassword());
+        return restClient.postJson(json,"rest/School/addStudent");
+    }
 }
