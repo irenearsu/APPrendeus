@@ -56,9 +56,9 @@ public class Emaitzak {
         URTAROAK.add(3,3);
     }
 
-    public boolean checkresults(int jokua, List<Integer> erab){
+    public float checkresults(int jokua, List<Integer> erab){
 
-        boolean ondo = false;
+        float ondo = 0;
 
         String erabs = erab.toString();
 
@@ -67,27 +67,27 @@ public class Emaitzak {
             case 0:
                 String gorputzas = GORPUTZA.toString();
                 if(gorputzas.equals(erabs))
-                     ondo=true;
+                     ondo=10;
                 break;
             case 1:
                 String familias = FAMILIA.toString();
                 if(familias.equals(erabs))
-                    ondo=true;
+                    ondo=10;
                 break;
             case 2:
                 String etxeas = ETXEA.toString();
                 if(etxeas.equals(erabs))
-                    ondo=true;
+                    ondo=10;
                 break;
             case 3:
                 String egunaks = EGUNAK.toString();
                 if(egunaks.equals(erabs))
-                    ondo=true;
+                    ondo=10;
                 break;
             case 4:
                 String urtaroaks = URTAROAK.toString();
                 if(urtaroaks.equals(erabs))
-                    ondo=true;
+                    ondo=10;
                 break;
 
         }

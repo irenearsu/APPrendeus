@@ -30,4 +30,13 @@ public class Server {
         json.put("password",user.getPassword());
         return restClient.postJson(json,"rest/School/addStudent");
     }
+
+    public String emaitzaIgo(Play play) throws JSONException,IOException{
+        JSONObject json = new JSONObject();
+        json.put("name",play.getName());
+        json.put("idgame",play.getIdGame());
+        json.put("note",play.getNote());
+        json.put("date",play.getDate());
+        return restClient.postJson(json,"rest/School/play");
+    }
 }

@@ -10,11 +10,20 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import eus.ehu.adibidea.tta.apprendeus.Negocio.Emaitzak;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.Play;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.ProgressTask;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.Server;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
 
 public class UrtaroakActivity extends AppCompatActivity {
+
+    User user;
+    Play play;
+    public final Server server = new Server("http://u017633.ehu.eus:28080/APPrendeus");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +33,52 @@ public class UrtaroakActivity extends AppCompatActivity {
 
     protected void zuzendu(View view){
 
-        if(ondo()){
+        user = User.getInstance("","");
+
+        new ProgressTask<String>(this){
+            @Override
+            protected String work() throws Exception{
+                Date date = new Date();
+                play = new Play(user.getName(),5,ondo(),date.toString());
+                return server.emaitzaIgo(play);
+            }
+
+            @Override
+            protected void onFinish(String result){
+                if(result.equals("Emaitza ondo gorde da")){
+                    if(ondo()==10){
+                        Toast.makeText(getApplicationContext(),"Ondo!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(),Menu2Activity.class);
+                        intent.putExtra(Menu2Activity.MAILA_EXTRA,2);
+                        startActivity(intent);
+                    }
+                    else
+                        Toast.makeText(getApplicationContext(),"Saiatu berriro..", Toast.LENGTH_SHORT).show();
+
+
+                }
+                else if (result.equals("Emaitza ez da gorde")){
+                    Toast.makeText(getApplicationContext(),"Ez da emaitza gorde", Toast.LENGTH_SHORT).show();
+                }
+
+                else
+                    Toast.makeText(getApplicationContext(),"KX ez", Toast.LENGTH_SHORT).show();
+
+            }
+
+        }.execute();
+
+        /*if(ondo()){
             Toast.makeText(getApplicationContext(), "Ondo!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this,Menu2Activity.class);
             intent.putExtra(Menu2Activity.MAILA_EXTRA,2);
             startActivity(intent);
         }
         else
-            Toast.makeText(getApplicationContext(), "Saiatu berriro!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Saiatu berriro!", Toast.LENGTH_SHORT).show();*/
     }
 
-    protected boolean ondo(){
+    protected float ondo(){
 
         List<Integer> erab = new ArrayList<Integer>();
 
@@ -63,7 +107,7 @@ public class UrtaroakActivity extends AppCompatActivity {
             erab.add(3,4);
 
         Emaitzak e = new Emaitzak();
-        boolean ondo = e.checkresults(4,erab);
+        float ondo = e.checkresults(4,erab);
 
         return ondo;
 

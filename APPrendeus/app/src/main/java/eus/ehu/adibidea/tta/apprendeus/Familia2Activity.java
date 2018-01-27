@@ -9,9 +9,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import eus.ehu.adibidea.tta.apprendeus.Negocio.Emaitzak;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.Play;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.ProgressTask;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.Server;
+import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
 
 public class Familia2Activity extends AppCompatActivity {
 
@@ -19,6 +24,11 @@ public class Familia2Activity extends AppCompatActivity {
     public String FAMILIA1;
     public static final String FAMILIA_EXTRA2 = "FAMILIA2";
     public String FAMILIA2;
+
+    User user;
+    Play play;
+    public final Server server = new Server("http://u017633.ehu.eus:28080/APPrendeus");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +42,52 @@ public class Familia2Activity extends AppCompatActivity {
 
     protected void zuzendu(View view){
 
-        if(ondo()){
+        user = User.getInstance("","");
+
+        new ProgressTask<String>(this){
+            @Override
+            protected String work() throws Exception{
+                Date date = new Date();
+                play = new Play(user.getName(),2,ondo(),date.toString());
+                return server.emaitzaIgo(play);
+            }
+
+            @Override
+            protected void onFinish(String result){
+                if(result.equals("Emaitza ondo gorde da")){
+                    if(ondo()==10){
+                        Toast.makeText(getApplicationContext(),"Ondo!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(),EtxeaActivity.class);
+                        startActivity(intent);
+                    }
+                    else
+                        Toast.makeText(getApplicationContext(),"Saiatu berriro..", Toast.LENGTH_SHORT).show();
+
+
+                }
+                else if (result.equals("Emaitza ez da gorde")){
+                    Toast.makeText(getApplicationContext(),"Ez da emaitza gorde", Toast.LENGTH_SHORT).show();
+                }
+
+                else
+                    Toast.makeText(getApplicationContext(),"KX ez", Toast.LENGTH_SHORT).show();
+
+            }
+
+        }.execute();
+
+        /*if(ondo()){
             Toast.makeText(getApplicationContext(), "Ondo!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this,EtxeaActivity.class);
             startActivity(intent);
         }
         else
-            Toast.makeText(getApplicationContext(), "Saiatu berriro!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Saiatu berriro!", Toast.LENGTH_SHORT).show();*/
 
 
     }
 
-    protected boolean ondo(){
+    protected float ondo(){
 
         List<Integer> erab = new ArrayList<Integer>();
 
@@ -74,11 +118,11 @@ public class Familia2Activity extends AppCompatActivity {
         }
         catch (NumberFormatException e){
 
-            return false;
+            return 0;
         }
 
         Emaitzak e = new Emaitzak();
-        boolean ondo = e.checkresults(1,erab);
+        float ondo = e.checkresults(1,erab);
 
         return ondo;
 
