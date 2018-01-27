@@ -40,7 +40,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login(View view) throws JSONException{
 
-        user = new User(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
+        user = User.getInstance(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
+
+        //user = new User(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
 
         new ProgressTask<String>(this){
             @Override
@@ -68,7 +70,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void signIn(View view){
 
-        user = new User(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
+        user = User.getInstance(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
+
+        //user = new User(((EditText) findViewById(R.id.erab)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
 
         new ProgressTask<String>(this){
             @Override
