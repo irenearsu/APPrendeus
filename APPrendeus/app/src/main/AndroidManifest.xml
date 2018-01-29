@@ -15,36 +15,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Vista.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu1Activity" />
-        <activity android:name=".Menu2Activity" />
-        <activity android:name=".GorputzaActivity" />
-        <activity android:name=".FamiliaActivity" />
-        <activity android:name=".EtxeaActivity" />
-        <activity android:name=".EgunakActivity" />
-        <activity android:name=".UrtaroakActivity" />
-        <activity android:name=".BingoaActivity" />
-        <activity android:name=".Familia2Activity" />
+        <activity android:name=".Vista.Menu1Activity" />
+        <activity android:name=".Vista.Menu2Activity" />
+        <activity android:name=".Vista.GorputzaActivity" />
+        <activity android:name=".Vista.FamiliaActivity" />
+        <activity android:name=".Vista.EtxeaActivity" />
+        <activity android:name=".Vista.EgunakActivity" />
+        <activity android:name=".Vista.UrtaroakActivity" />
+        <activity android:name=".Vista.BingoaActivity" />
+        <activity android:name=".Vista.Familia2Activity" />
         <activity
-            android:name=".SukaldeaActivity"
+            android:name=".Vista.SukaldeaActivity"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity
-            android:name=".EgongelaActivity"
+            android:name=".Vista.EgongelaActivity"
             android:theme="@style/AppTheme.CustomTheme"/>
         <activity
-            android:name=".JangelaActivity"
+            android:name=".Vista.JangelaActivity"
             android:theme="@style/AppTheme.CustomTheme"/>
         <activity
-            android:name=".LogelaActivity"
+            android:name=".Vista.LogelaActivity"
             android:theme="@style/AppTheme.CustomTheme"/>
         <activity
-            android:name=".KomunaActivity"
+            android:name=".Vista.KomunaActivity"
             android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 

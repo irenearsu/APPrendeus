@@ -1,18 +1,19 @@
-package eus.ehu.adibidea.tta.apprendeus;
+package eus.ehu.adibidea.tta.apprendeus.Vista;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.EditText;
 
-public class JangelaActivity extends AppCompatActivity {
+import eus.ehu.adibidea.tta.apprendeus.R;
+
+public class EgongelaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jangela);
+        setContentView(R.layout.activity_egongela);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -27,15 +28,16 @@ public class JangelaActivity extends AppCompatActivity {
 
         try{
 
-            EtxeaActivity.JANGELA = ((EditText) findViewById(R.id.jangela)).getText().toString();
+            EtxeaActivity.EGONGELA = ((EditText) findViewById(R.id.egongela)).getText().toString();
         }
-        catch (NumberFormatException n){
+        catch(NumberFormatException n){
 
-            EtxeaActivity.JANGELA = "";
+            EtxeaActivity.EGONGELA = "";
         }
+
 
         /*Intent intent = new Intent(this,EtxeaActivity.class);
-        intent.putExtra(EtxeaActivity.JANGELA_EXTRA,((EditText) findViewById(R.id.jangela)).getText().toString());
+        intent.putExtra(EtxeaActivity.EGONGELA_EXTRA,((EditText) findViewById(R.id.egongela)).getText().toString());
         startActivity(intent);*/
     }
 }

@@ -1,4 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus;
+package eus.ehu.adibidea.tta.apprendeus.Vista;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.User;
+import eus.ehu.adibidea.tta.apprendeus.R;
 
 public class Menu1Activity extends AppCompatActivity {
 

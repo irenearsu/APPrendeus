@@ -1,4 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus;
+package eus.ehu.adibidea.tta.apprendeus.Vista;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.User;
+import eus.ehu.adibidea.tta.apprendeus.R;
 
 public class Menu2Activity extends AppCompatActivity {
 
@@ -35,6 +36,10 @@ public class Menu2Activity extends AppCompatActivity {
                 findViewById(R.id.button2).setEnabled(true);
                 break;
             case 2:
+                findViewById(R.id.button2).setEnabled(true);
+                findViewById(R.id.button3).setEnabled(true);
+                break;
+            case 3:
                 findViewById(R.id.button2).setEnabled(true);
                 findViewById(R.id.button3).setEnabled(true);
                 break;

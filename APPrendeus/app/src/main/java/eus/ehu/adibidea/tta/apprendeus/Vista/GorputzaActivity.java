@@ -1,4 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus;
+package eus.ehu.adibidea.tta.apprendeus.Vista;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,22 +11,20 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import eus.ehu.adibidea.tta.apprendeus.Negocio.Emaitzak;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.Play;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.ProgressTask;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.Server;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.*;
+import eus.ehu.adibidea.tta.apprendeus.R;
 
-public class EgunakActivity extends AppCompatActivity {
+public class GorputzaActivity extends AppCompatActivity {
 
     User user;
     Play play;
     public final Server server = new Server("http://u017633.ehu.eus:28080/APPrendeus");
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_egunak);
+        setContentView(R.layout.activity_gorputza);
     }
 
     protected void Zuzendu(View view){
@@ -37,16 +35,16 @@ public class EgunakActivity extends AppCompatActivity {
             @Override
             protected String work() throws Exception{
                 Date date = new Date();
-                play = new Play(user.getName(),4,ondo(),date.toString());
+                play = new Play(user.getName(),1, Ondo(),date.toString());
                 return server.emaitzaIgo(play);
             }
 
             @Override
             protected void onFinish(String result){
                 if(result.equals("Emaitza ondo gorde da")){
-                    if(ondo()==10){
+                    if(Ondo()==10){
                         Toast.makeText(getApplicationContext(),"Ondo!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(),UrtaroakActivity.class);
+                        Intent intent = new Intent(getApplicationContext(),FamiliaActivity.class);
                         startActivity(intent);
                     }
                     else
@@ -65,29 +63,35 @@ public class EgunakActivity extends AppCompatActivity {
 
         }.execute();
 
+
         /*if (Ondo()){
             Toast.makeText(getApplicationContext(), "Ondo!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this,UrtaroakActivity.class);
+            play = new Play(user.getName(),1,1,date.toString());
+            Intent intent = new Intent(this,FamiliaActivity.class);
             startActivity(intent);
         }
-        else
-            Toast.makeText(getApplicationContext(), "Saiatu berriro!", Toast.LENGTH_SHORT).show();*/
+        else{
+            play = new Play(user.getName(),1,0,date.toString());
+            Toast.makeText(getApplicationContext(), "Saiatu berriro!", Toast.LENGTH_SHORT).show();
+
+        }*/
+
 
     }
 
-    protected float ondo(){
+    protected float Ondo(){
 
         List<Integer> erab = new ArrayList<Integer>();
 
         try{
 
-            erab.add(0,Integer.parseInt(((EditText) findViewById(R.id.a1)).getText().toString()));
-            erab.add(1,Integer.parseInt(((EditText) findViewById(R.id.a2)).getText().toString()));
-            erab.add(2,Integer.parseInt(((EditText) findViewById(R.id.a3)).getText().toString()));
-            erab.add(3,Integer.parseInt(((EditText) findViewById(R.id.o1)).getText().toString()));
-            erab.add(4,Integer.parseInt(((EditText) findViewById(R.id.o2)).getText().toString()));
-            erab.add(5,Integer.parseInt(((EditText) findViewById(R.id.l)).getText().toString()));
-            erab.add(6,Integer.parseInt(((EditText) findViewById(R.id.i)).getText().toString()));
+            erab.add(0,Integer.parseInt(((EditText) findViewById(R.id.burua)).getText().toString()));
+            erab.add(1,Integer.parseInt(((EditText) findViewById(R.id.oina)).getText().toString()));
+            erab.add(2,Integer.parseInt(((EditText) findViewById(R.id.sabela)).getText().toString()));
+            erab.add(3,Integer.parseInt(((EditText) findViewById(R.id.lepoa)).getText().toString()));
+            erab.add(4,Integer.parseInt(((EditText) findViewById(R.id.eskua)).getText().toString()));
+            erab.add(5,Integer.parseInt(((EditText) findViewById(R.id.hanka)).getText().toString()));
+            erab.add(6,Integer.parseInt(((EditText) findViewById(R.id.besoa)).getText().toString()));
 
         }
         catch (NumberFormatException e){
@@ -95,9 +99,12 @@ public class EgunakActivity extends AppCompatActivity {
             return 0;
         }
 
+
+
         Emaitzak e = new Emaitzak();
-        float ondo = e.checkresults(3,erab);
+        float ondo = e.checkresults(0,erab);
 
         return ondo;
+
     }
 }

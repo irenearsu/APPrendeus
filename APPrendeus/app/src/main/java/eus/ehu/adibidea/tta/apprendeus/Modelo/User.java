@@ -1,4 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus.Negocio;
+package eus.ehu.adibidea.tta.apprendeus.Modelo;
 
 /**
  * Created by tta on 1/21/18.

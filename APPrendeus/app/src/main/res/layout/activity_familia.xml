@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="eus.ehu.adibidea.tta.apprendeus.FamiliaActivity"
+    tools:context="eus.ehu.adibidea.tta.apprendeus.Vista.FamiliaActivity"
     android:weightSum="1">
 
     <TextView

@@ -1,4 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus.Negocio;
+package eus.ehu.adibidea.tta.apprendeus.Modelo;
 
 import org.json.JSONException;
 import org.json.JSONObject;

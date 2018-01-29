@@ -1,4 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus;
+package eus.ehu.adibidea.tta.apprendeus.Vista;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,14 +13,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
 
-import eus.ehu.adibidea.tta.apprendeus.Negocio.ProgressTask;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.Server;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.ProgressTask;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.Server;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.User;
+import eus.ehu.adibidea.tta.apprendeus.R;
 
 public class LoginActivity extends AppCompatActivity {
 

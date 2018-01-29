@@ -1,4 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus;
+package eus.ehu.adibidea.tta.apprendeus.Vista;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,11 +12,12 @@ import android.widget.Toast;
 import java.util.Date;
 import java.util.List;
 
-import eus.ehu.adibidea.tta.apprendeus.Negocio.Bingoa;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.Play;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.ProgressTask;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.Server;
-import eus.ehu.adibidea.tta.apprendeus.Negocio.User;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.Bingoa;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.Play;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.ProgressTask;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.Server;
+import eus.ehu.adibidea.tta.apprendeus.Modelo.User;
+import eus.ehu.adibidea.tta.apprendeus.R;
 
 public class BingoaActivity extends AppCompatActivity {
 

@@ -1,6 +1,4 @@
-package eus.ehu.adibidea.tta.apprendeus.Negocio;
-
-import java.util.Date;
+package eus.ehu.adibidea.tta.apprendeus.Modelo;
 
 /**
  * Created by tta on 1/27/18.

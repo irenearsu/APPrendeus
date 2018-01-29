@@ -1,7 +1,6 @@
-package eus.ehu.adibidea.tta.apprendeus.Negocio;
+package eus.ehu.adibidea.tta.apprendeus.Modelo;
 
 import android.util.Base64;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;

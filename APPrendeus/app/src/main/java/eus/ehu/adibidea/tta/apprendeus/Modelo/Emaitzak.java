@@ -1,7 +1,6 @@
-package eus.ehu.adibidea.tta.apprendeus.Negocio;
+package eus.ehu.adibidea.tta.apprendeus.Modelo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

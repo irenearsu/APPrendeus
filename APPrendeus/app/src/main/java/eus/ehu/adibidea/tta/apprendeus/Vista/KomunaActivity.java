@@ -1,23 +1,19 @@
-package eus.ehu.adibidea.tta.apprendeus;
+package eus.ehu.adibidea.tta.apprendeus.Vista;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 
-public class SukaldeaActivity extends AppCompatActivity {
+import eus.ehu.adibidea.tta.apprendeus.R;
+
+public class KomunaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        setContentView(R.layout.activity_sukaldea);
-
+        setContentView(R.layout.activity_komuna);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -28,24 +24,20 @@ public class SukaldeaActivity extends AppCompatActivity {
         getWindow().setLayout((int)(width*.8),(int)(height*.7));
     }
 
-
-
     protected void Gorde(View view){
 
         try{
 
-            EtxeaActivity.SUKALDEA = ((EditText) findViewById(R.id.sukaldea)).getText().toString();
-
+            EtxeaActivity.KOMUNA = ((EditText) findViewById(R.id.komuna)).getText().toString();
         }
-        catch (NumberFormatException e){
-            EtxeaActivity.SUKALDEA = "";
+        catch(NumberFormatException n){
+
+            EtxeaActivity.KOMUNA = "";
         }
 
 
         /*Intent intent = new Intent(this,EtxeaActivity.class);
-        intent.putExtra(EtxeaActivity.SUKALDEA_EXTRA,((EditText) findViewById(R.id.sukaldea)).getText().toString());
+        intent.putExtra(EtxeaActivity.KOMUNA_EXTRA,((EditText) findViewById(R.id.komuna)).getText().toString());
         startActivity(intent);*/
     }
-
-
 }
