@@ -1,6 +1,7 @@
 package eus.ehu.adibidea.tta.apprendeus;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -49,7 +50,14 @@ public class UrtaroakActivity extends AppCompatActivity {
                     if(ondo()==10){
                         Toast.makeText(getApplicationContext(),"Ondo!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(),Menu2Activity.class);
-                        intent.putExtra(Menu2Activity.MAILA_EXTRA,2);
+                        //intent.putExtra(Menu2Activity.MAILA_EXTRA,2);
+
+                        //Shared preferences
+                        SharedPreferences prefs = getSharedPreferences(user.getName(),MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putInt("PREF_MAILA",2);
+                        editor.commit();
+
                         startActivity(intent);
                     }
                     else
